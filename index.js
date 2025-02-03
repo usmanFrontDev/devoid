@@ -872,7 +872,7 @@ const HomePagePlanSectionAnimationAndFunctionalities = () => {
     })
   );
 };
-HomePagePlanSectionAnimationAndFunctionalities();
+// HomePagePlanSectionAnimationAndFunctionalities();
 
 const HomePageReviewsSectionCubeEffectAndAnimation = () => {
   var swiper2 = new Swiper(".mySwiper2", {
