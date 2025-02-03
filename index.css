@@ -91,7 +91,7 @@ body {
   padding: 0vw 0vw 0vw 1vw;
 }
 .nav-logo img {
-  width: 10vw;
+  width: 12vw;
 }
 .nav .nav-menu ul {
   display: flex;
@@ -2231,7 +2231,7 @@ body {
   }
 
   .nav-logo img {
-    width: 10vw;
+    width: 11vw;
   }
   .nav .nav-menu {
     display: initial;
