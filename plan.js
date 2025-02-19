@@ -3,53 +3,58 @@
 })();
 
 const HamburgerFunction = () => {
-  const hamburg = document.querySelector(".hamburger");
-  const hamnav = document.querySelector(".hamburg-nav");
-  const closebtn = document.querySelector(".btn-nav-ham");
+  const hamburg = document.querySelector('.hamburger');
+  const hamnav = document.querySelector('.hamburg-nav');
+  const closebtn = document.querySelector('.btn-nav-ham');
 
-  function open(){
-      hamburg.addEventListener('click', ()=>{
-        hamnav.style.opacity= '1';
-        hamnav.style.transform= 'translateX(0%)';
-      })
+  function open() {
+    hamburg.addEventListener('click', () => {
+      hamnav.style.opacity = '1';
+      hamnav.style.transform = 'translateX(0%)';
+    });
   }
-  function close(){
-    closebtn.addEventListener('click', ()=>{
-      hamnav.style.opacity= '0';
-      hamnav.style.transform= 'translateX(100%)';
-    })
+  function close() {
+    closebtn.addEventListener('click', () => {
+      hamnav.style.opacity = '0';
+      hamnav.style.transform = 'translateX(100%)';
+    });
   }
-  open()
-  close()
+  open();
+  close();
 };
 HamburgerFunction();
 
 const NavigationOfPlans = () => {
   // FOR DECLERATION
 
-  const navbarh1 = document.querySelectorAll(".PlanPage2navbar h3");
-  const PplanBoxbasic = document.querySelector(".basic");
-  const PplanBoxgold = document.querySelector(".gold");
-  const PplanBoxplatinum = document.querySelector(".platinum");
+  const navbarh1 = document.querySelectorAll('.PlanPage2navbar h3');
+  const PplanBoxbasic = document.querySelector('.basic');
+  const PplanBoxgold = document.querySelector('.gold');
+  const PplanBoxplatinum = document.querySelector('.platinum');
+  const PplanBoxBasicPrice = document.querySelector('#basicprice');
+  const PplanBoxGoldPrice = document.querySelector('#basicprice2');
+  const PplanBoxPlatinumPrice = document.querySelector('#basicprice3');
+
+  console.log(PplanBoxBasicPrice, PplanBoxGoldPrice, PplanBoxPlatinumPrice);
 
   // FOR NAVIGATION
   const planNavigateNavbar = () => {
     navbarh1.forEach(function (h1) {
-      h1.addEventListener("click", function () {
+      h1.addEventListener('click', function () {
         for (let i = 0; i < navbarh1.length; i++) {
-          navbarh1[i].style.color = "#fafafa";
-          navbarh1[i].style.borderBottom = " 1px solid transparent";
+          navbarh1[i].style.color = '#fafafa';
+          navbarh1[i].style.borderBottom = ' 1px solid transparent';
         }
-        h1.style.borderBottom = " 1px solid #ffc107";
-        h1.style.color = " #ffc107";
+        h1.style.borderBottom = ' 1px solid #ffc107';
+        h1.style.color = ' #ffc107';
       });
     });
   };
   planNavigateNavbar();
 
   navbarh1.forEach(function (h1) {
-    h1.addEventListener("click", function () {
-      if (h1.innerText === "WEB DEVELOPMENT") {
+    h1.addEventListener('click', function () {
+      if (h1.innerText === 'WEB DEVELOPMENT') {
         PplanBoxbasic.innerHTML = `  
                 <p>
                   <span class="spanoutspan">
@@ -85,6 +90,7 @@ const NavigationOfPlans = () => {
                 <button>
                   get started <i class="fa-solid fa-arrow-up"></i>
                 </button>`;
+        PplanBoxBasicPrice.innerHTML = ` $150/ <span>month</span> `;
         PplanBoxgold.innerHTML = `  
                   <p>
                   <span class="spanoutspan">
@@ -131,6 +137,7 @@ const NavigationOfPlans = () => {
                 <button>
                   get started <i class="fa-solid fa-arrow-up"></i>
                 </button>`;
+        PplanBoxGoldPrice.innerHTML = `$400/ <span>month</span> `;
         PplanBoxplatinum.innerHTML = `  
                 <p>
                 <span class="spanoutspan">
@@ -195,8 +202,9 @@ const NavigationOfPlans = () => {
               <button>
                 get started <i class="fa-solid fa-arrow-up"></i>
                 </button>`;
+        PplanBoxPlatinumPrice.innerHTML = `$800/ <span>month</span> `;
       }
-      if (h1.innerText === "UI/UX DESIGNING") {
+      if (h1.innerText === 'UI/UX DESIGNING') {
         PplanBoxbasic.innerHTML = `  
 <p>
   <span class="spanoutspan">
@@ -367,7 +375,7 @@ const NavigationOfPlans = () => {
                 get started <i class="fa-solid fa-arrow-up"></i>
               </button>`;
       }
-      if (h1.innerText === "MERN STACK") {
+      if (h1.innerText === 'MERN STACK') {
         PplanBoxbasic.innerHTML = `  
 <p>
     <span class="spanoutspan">
@@ -403,12 +411,13 @@ const NavigationOfPlans = () => {
     <span class="spanoutspan">
         <span class="spaninapan"></span>
     </span>
-    Responsive design
+    Basic framer motion animations
 </p>
 
                <button>
                 get started <i class="fa-solid fa-arrow-up"></i>
                </button>`;
+        PplanBoxBasicPrice.innerHTML = ` $500/ <span>month</span> `;
         PplanBoxgold.innerHTML = `  
 <p>
   <span class="spanoutspan">
@@ -467,6 +476,7 @@ const NavigationOfPlans = () => {
                 <button>
                   get started <i class="fa-solid fa-arrow-up"></i>
                 </button>`;
+        PplanBoxGoldPrice.innerHTML = ` $1200/ <span>month</span> `;
         PplanBoxplatinum.innerHTML = `  
 <p>
   <span class="spanoutspan">
@@ -531,8 +541,9 @@ const NavigationOfPlans = () => {
               <button>
                 get started <i class="fa-solid fa-arrow-up"></i>
               </button>`;
+        PplanBoxPlatinumPrice.innerHTML = ` $2500/ <span>month</span> `;
       }
-      if (h1.innerText === "CMS DEVELOPMENT") {
+      if (h1.innerText === 'CMS DEVELOPMENT') {
         PplanBoxbasic.innerHTML = `  
 <p>
     <span class="spanoutspan">
@@ -719,6 +730,365 @@ const NavigationOfPlans = () => {
               <button>
                 get started <i class="fa-solid fa-arrow-up"></i>
               </button>`;
+      }
+      if (h1.innerText === 'SEO SERVICES') {
+        PplanBoxbasic.innerHTML = `  
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+   Local SEO Audit Report
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+   Local Keyword Research & Analysis
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+    Local Competitor Analysis Report
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+   Local On-Page SEO Optimization (Basic Optimization)
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+  On-Page Local SEO Optimization Plan
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+  Local Content Calendar (Basic Schedule)
+</p>
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+ Google My Business Management
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+ Local Citations Setup
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+Review Management Strategy
+</p>
+
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+Local Analytics Setup (Google Analytics Integration)
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+Google Analytics Local Integration
+</p>
+
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+Monthly Local Performance Reports	
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+Ongoing Support & Maintenance (3 Months)
+</p>
+
+
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+Local Conversion Rate Optimization Plan
+</p>
+
+<p>
+    <span class="spanoutspan">
+        <span class="spaninapan"></span>
+    </span>
+Local Engagement Report
+</p>
+   
+               <button>
+                get started <i class="fa-solid fa-arrow-up"></i>
+               </button>`;
+        PplanBoxBasicPrice.innerHTML = ` $450/ <span>month</span> `;
+        PplanBoxgold.innerHTML = `  
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                  Local SEO Audit Report
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                  Local Keyword Research & Analysis
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                   Local Competitor Analysis Report
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                  Local On-Page SEO Optimization (Advanced Optimization)
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                 On-Page Local SEO Optimization Plan
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                 Local Content Calendar (Advanced Schedule)
+               </p>
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                Google My Business Management
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                Local Citations Setup
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Review Management Strategy
+               </p>
+               
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Local Analytics Setup (Google Analytics & Tag Manager)
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Google Analytics Local Integration
+               </p>
+               
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Monthly Local Performance Reports	
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Ongoing Support & Maintenance (6 Months)
+               </p>
+               
+               
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Local Conversion Rate Optimization Plan
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Local Engagement Report
+               </p>
+                <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Local Marketing Automation Workflows
+               </p>
+                  
+                              <button>
+                               get started <i class="fa-solid fa-arrow-up"></i>
+                              </button>`;
+        PplanBoxGoldPrice.innerHTML = ` $800/ <span>month</span> `;
+        PplanBoxplatinum.innerHTML = `  
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                  Local SEO Audit Report
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                  Local Keyword Research & Analysis
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                   Local Competitor Analysis Report
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                  Local On-Page SEO Optimization (Comprehensive Optimization)
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                 On-Page Local SEO Optimization Plan
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                 Local Content Calendar (Comprehensive Schedule)
+               </p>
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                Google My Business Management
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+                Local Citations Setup
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Review Management Strategy
+               </p>
+               
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Local Analytics Setup (Advanced Analytics Integration)
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Google Analytics Local Integration
+               </p>
+               
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Monthly Local Performance Reports	
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Ongoing Support & Maintenance (12 Months)
+               </p>
+               
+               
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Local Conversion Rate Optimization Plan
+               </p>
+               
+               <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Local Engagement Report
+               </p>
+                <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Local Marketing Automation Workflows
+               </p>
+                  
+                <p>
+                   <span class="spanoutspan">
+                       <span class="spaninapan"></span>
+                   </span>
+               Local Omnichannel Marketing Integration Plan
+               </p>
+                              <button>
+                               get started <i class="fa-solid fa-arrow-up"></i>
+                              </button>`;
+        PplanBoxPlatinumPrice.innerHTML = ` $1200/ <span>month</span> `;
       }
     });
   });

@@ -4672,6 +4672,11 @@ body {
   border: 1px solid #151515e9;
 }
 
+.PlanPage2contentplansinnerbox:hover .PlanPage2contentplansinnerboxupperpart > h2 span {
+color: #151515b8;
+}
+
+
 .PlanPage2contentplansinnerbox:hover
   .PlanPage2contentplansinnerboxlowerpart
   > button {
@@ -4739,7 +4744,7 @@ body {
   font-weight: 600;
   text-transform: capitalize;
   font-family: sans-serif;
-  color: #151515b8;
+  color: #dadada56;
 }
 
 .PlanPage2contentplansinnerboxupperpart > p {
