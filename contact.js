@@ -27,3 +27,27 @@ const HamburgerFunction = () => {
   close()
 };
 HamburgerFunction();
+
+
+// Load EmailJS
+document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("feSRPLEQN8N9Y-Oi3"); // Replace with your Public Key
+
+  document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    emailjs.sendForm("service_ikr9mwv", "template_swjjjle", this).then(
+      function (response) {
+        alert("Message sent successfully!");
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        alert("Failed to send message. Please try again.");
+        console.log("FAILED...", error);
+      }
+    );
+
+    // Optionally clear the form after submission
+    this.reset();
+  });
+});

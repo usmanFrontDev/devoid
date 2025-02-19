@@ -104,25 +104,28 @@
           <div class="ContactFormP-1ContactContentLeftSide">
             <h2>GET A FREE CASE EVALUATION TODAY!</h2>
             <p>AVAILABLE 24 HOURS A DAY!</p>
-            <form>
+            <form
+              type="submit"
+              id="contact-form"
+            >
               <input
                 placeholder="Enter your Name"
                 type="text"
-                name="Name"
-                id=""
+                name="user_name"
+                required
               />
               <input
                 type="email"
                 placeholder="Enter a valid email adress"
-                name="Email"
-                id=""
+                name="user_email"
+                required
               />
               <textarea
-                name="textarea"
-                placeholder="Enter your message here"
-                id=""
-                cols="30"
-                rows="5"
+              placeholder="Enter your message here"
+              cols="30"
+              rows="5"
+              name="message"
+              required
               ></textarea>
               <button>submit</button>
             </form>
@@ -205,6 +208,10 @@
 
     <!-- Locomotive cdn for smooth scrolling -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+
+    <!-- EMAIL.JS FOR CONTACTING -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- CONTACT.JS FILE FOR SCRIPTING -->
     <script src="./contact.js"></script>
