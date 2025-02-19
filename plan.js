@@ -251,6 +251,7 @@ const NavigationOfPlans = () => {
                <button>
                 get started <i class="fa-solid fa-arrow-up"></i>
                </button>`;
+        PplanBoxBasicPrice.innerHTML = ` $250/ <span>month</span> `;
         PplanBoxgold.innerHTML = `  
 <p>
   <span class="spanoutspan">
@@ -310,6 +311,7 @@ const NavigationOfPlans = () => {
                 <button>
                   get started <i class="fa-solid fa-arrow-up"></i>
                 </button>`;
+        PplanBoxGoldPrice.innerHTML = `$650/ <span>month</span> `;
         PplanBoxplatinum.innerHTML = `  
 <p>
   <span class="spanoutspan">
@@ -374,6 +376,7 @@ const NavigationOfPlans = () => {
               <button>
                 get started <i class="fa-solid fa-arrow-up"></i>
               </button>`;
+        PplanBoxPlatinumPrice.innerHTML = `$1050/ <span>month</span> `;
       }
       if (h1.innerText === 'MERN STACK') {
         PplanBoxbasic.innerHTML = `  
@@ -590,6 +593,7 @@ const NavigationOfPlans = () => {
                <button>
                 get started <i class="fa-solid fa-arrow-up"></i>
                </button>`;
+        PplanBoxBasicPrice.innerHTML = ` $300/ <span>month</span> `;
         PplanBoxgold.innerHTML = `  
 <p>
   <span class="spanoutspan">
@@ -649,6 +653,7 @@ const NavigationOfPlans = () => {
                 <button>
                   get started <i class="fa-solid fa-arrow-up"></i>
                 </button>`;
+        PplanBoxGoldPrice.innerHTML = `$600/ <span>month</span> `;
         PplanBoxplatinum.innerHTML = `  
 <p>
   <span class="spanoutspan">
@@ -730,6 +735,7 @@ const NavigationOfPlans = () => {
               <button>
                 get started <i class="fa-solid fa-arrow-up"></i>
               </button>`;
+        PplanBoxPlatinumPrice.innerHTML = `$1500/ <span>month</span> `;
       }
       if (h1.innerText === 'SEO SERVICES') {
         PplanBoxbasic.innerHTML = `  
